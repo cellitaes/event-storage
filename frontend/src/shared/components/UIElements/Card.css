@@ -1,0 +1,27 @@
+.card {
+  position: relative;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow: hidden;
+  background: white;
+}
+
+.eventForm {
+  width: 40%;
+  margin: 20vh auto 0;
+}
+
+.eventForm__buton {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #13d447;
+  border-radius: 4px;
+  background: #13d447;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}

@@ -1,0 +1,38 @@
+.form-field--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-field--center label {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.form-field--center input {
+  border-radius: 5px;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.form-field--center input:focus {
+  outline: none;
+  background: #ebebeb;
+  border-color: #211bd5;
+  border-width: 2px;
+}
+
+.form-field--center input.error {
+  border-color: red;
+  background: #ffd1d1;
+}
+
+.form-field--center div.error {
+  color: red;
+}
+
+.eventForm__button--spacing {
+  margin-top: 2rem;
+}
