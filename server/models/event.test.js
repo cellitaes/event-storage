@@ -1,9 +1,11 @@
+const { CONNECTION_STRING_PLAYGROUND } = require("../config");
+
 import { it, expect, describe, beforeAll, afterEach, afterAll } from "vitest";
 
 import mongoose from "mongoose";
 const Event = require("./event");
 
-const mongodb = "mongodb://localhost:27017/playground";
+const mongodb = CONNECTION_STRING_PLAYGROUND;
 mongoose.connect(mongodb);
 
 describe("Event Model", () => {
