@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
+const { CONNECTION_STRING } = require("./config");
 const HttpError = require("./models/httpError");
 const eventRoutes = require("./routes/eventRoutes");
 
@@ -36,9 +37,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(
-    `mongodb+srv://brainhub:brainhub@brainhub.7uietn0.mongodb.net/events`
-  )
+  .connect(CONNECTION_STRING)
   .then(() => {
     app.listen(5000);
   })

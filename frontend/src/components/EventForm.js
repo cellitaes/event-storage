@@ -31,7 +31,10 @@ const EventSchema = Yup.object().shape({
     .min(2, "Please enter a name with at least 2 characters.")
     .required("Please enter last name."),
   email: Yup.string()
-    .email("Please enter a valid email")
+    .matches(
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      "Please enter valid email."
+    )
     .required("Please enter email."),
   eventDate: Yup.date()
     .min(minDate, "Please enter event date that is not from past.")
@@ -51,7 +54,7 @@ const formFields = [
   },
   {
     name: "email",
-    label: "Emial:",
+    label: "Email:",
     type: "text",
   },
   {
