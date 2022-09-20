@@ -9,6 +9,7 @@ const EventInput = ({ formField, touched, errors, field }) => {
         className={`${touched[field.name] && errors[field.name] && "error"}`}
         type={formField.type}
         min={formField.min}
+        data-testid={formField.name}
       />
       {touched[field.name] && errors[field.name] && (
         <div className="error">{errors[field.name]}</div>
